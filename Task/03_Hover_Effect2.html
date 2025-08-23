@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            margin: 100px auto;
+            height: 60px;
+            width: 130px;
+            background-color: transparent;
+            border: 2px white;
+        }
+        .effect{
+            margin: auto;
+            height: 40px;
+            width: 110px;
+            background-color: rgb(16, 255, 235);
+            border: 2px white;
+            transition: .6s;
+        }
+        .main:hover .effect{
+            transform: scale(1.1);
+        }
+        .text{
+            
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            transition: .6s;
+        }
+        .main:hover .text{
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="effect">
+            <div class="text">
+                Demo
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

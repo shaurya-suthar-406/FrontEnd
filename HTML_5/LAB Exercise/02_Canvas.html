@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <canvas id="canvas"></canvas>
+    <script>
+        var cnv=document.getElementById("canvas")
+        var big=cnv.getContext('2d')
+        big.fillstyle='red';
+        big.fillRect(30,30,130,70);
+        big.stroke();
+
+    </script>
+    </div>  
+    <div>
+    <canvas id="canvas2"></canvas>
+    <script>
+        var cnv=document.getElementById("canvas2")
+        var big=cnv.getContext('2d')
+        big.fillstyle='yellow';
+        big.fillRect(30,30,90,90);
+        big.stroke();
+    </script>
+    </div>
+    <canvas id="canvas3"></canvas>
+    <script>
+        var canvas=document.getElementById("canvas3")
+        var ctx=canvas.getContext('2d')
+        ctx.fillstyle='blue';
+        ctx.beginPath();
+        ctx.moveTo(150,50);
+        ctx.lineTo(50,200);
+        ctx.lineTo(250,200);
+        ctx.closePath();
+        ctx.fill();
+
+    </script>
+</body>
+</html>
