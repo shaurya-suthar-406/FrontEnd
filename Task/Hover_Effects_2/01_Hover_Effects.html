@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li{
+            margin: auto;
+            display: inline-block;
+            background-color: cyan;
+            padding: 10px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        li::after{
+            content: "";
+            height: 5px;
+            width: 0%;
+            background: black;
+            position: absolute;
+            top: 85%;
+            left: 0;
+            transition: .4s;
+            }
+        li:hover::after{
+            width: 100%;
+        }
+        li::before{
+            content: "";
+            height: 5px;
+            width: 0%;
+            background: black;
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            transition: .4s;
+        }
+        li:hover::before{
+            width: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Help</li>
+        <li>Data</li>
+    </ul>
+</body>
+</html>

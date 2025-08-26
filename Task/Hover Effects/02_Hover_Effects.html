@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 200px;
+            width: 300px;
+            margin: 100px auto;
+            
+        }
+        .div{
+            height: 200px;
+            width: 300px;
+            border: 2px solid;
+            overflow: hidden;
+        }
+        .img{
+            height: 200px;
+            width: 335px;
+            transform: translate(-10%,0%);
+            transition: .5s;
+        }
+        .main:hover .img{
+            transform: translate(0%,0%);
+        }
+        .effect{
+            height: 150px;
+            width: 250px;
+            border: 2px solid ;
+            text-align: right;
+            transform: translate(0%,15%);
+            opacity: 0;
+        }
+        .main:hover .effect{
+            transform: translate(10%,15%);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="div">
+            <div class="img">
+                <img src="https://images.pexels.com/photos/32885073/pexels-photo-32885073.jpeg?_gl=1*19c4039*_ga*MTE2OTcwNjgzOS4xNzU1NzAzMDA2*_ga_8JE65Q40S6*czE3NTU4NjY4OTQkbzMkZzAkdDE3NTU4NjY4OTUkajU5JGwwJGgw" width="335px" height="200px" alt="">
+            </div>
+            <div class="effect">
+                <pre><h1>HELLO </h1></pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

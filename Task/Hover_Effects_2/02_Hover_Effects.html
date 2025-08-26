@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 700px;
+            width: 700px;
+            margin: 210px auto;
+        }
+        .box{
+            margin: auto;
+            height: 200px;
+            width: 200px;
+            outline: 2px solid;
+            overflow: hidden;
+        }
+        .effect1{
+            height: 200px;
+            width: 200px;
+            background-color: lime;
+            opacity: 0.4;
+            transform: translate(100%,-100%);
+            transition: .5s;
+        }
+        .box:hover .effect1{
+            transform: translate(0,0);
+        }
+        .effect2{
+            height: 200px;
+            width: 200px;
+            background-color: lime;
+            opacity: 0.4;
+            transform: translate(-100%,0%);
+            transition: .5s;
+        }
+        .box:hover .effect2{
+            transform: translate(0,-100%);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="effect1"></div>
+            <div class="effect2"></div>
+        </div>
+    </div>
+</body>
+</html>

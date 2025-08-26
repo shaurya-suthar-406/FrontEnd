@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            margin: 100px auto;
+            height: 150px;
+            width: 150px;
+            background-color: black;
+        }
+        .effect{
+            margin: auto;
+            height: 2px;
+            width: 2px;
+            background-color: aqua;
+            opacity: 0;
+            transform: translate(0,75px);
+            transition: .6s;
+        }
+        .main:hover .effect{
+            opacity: 1;
+            transform: translate(0,74px) scale(75);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="effect">
+
+        </div>
+    </div>
+</body>
+</html>
