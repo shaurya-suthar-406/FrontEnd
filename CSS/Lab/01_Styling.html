@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #table{
+            background: linear-gradient(blue,cyan);
+        }
+        .data{
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .submit{
+            padding: 6px 12px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .submit:hover{
+            background-color: rgb(209, 209, 209);
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="">
+        <table id="table" align="center" border="5">
+            <caption><h2>Demo Form</h2></caption>
+            <tr>
+                <th>Full Name :</th>
+                <td><input class="data" type="text" name="" id="" size="70%" placeholder="Full Name" required></td>
+            </tr>
+            <tr>
+                <th>E-Mail :</th>
+                <td><input class="data" type="email" name="" id="" placeholder="Enter Your E-Mail" size="70%" pattern="[a-z0-9]@+[a-z].+[a-z]{2,3}$" required></td>
+            </tr>
+            <tr>
+                <th>Phone No. :</th>
+                <td><input class="data" type="tel" placeholder="Enter Phone No." maxlength="10" pattern="[6-9][0-9]{9}" name="" id=""></td>
+            </tr>
+            <tr>
+                <th>Subject :</th>
+                <td class="data"><select name="" id="">
+                    <option value="" disabled>--- Select Your Subject ---</option>
+                    <option value="">Subject 1</option>
+                    <option value="">Subject 2</option>
+                    <option value="">Subject 3</option>
+                    <option value="">Subject 4</option>
+                    <option value="">Subject 5</option>
+                    <option value="">Subject 6</option>
+                </select></td>
+            </tr>
+            <tr>
+                <th>Message :</th>
+                <td>
+                    <textarea class="data" name="" id="" rows="5" cols="70" placeholder="Enter Your Message"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input class="submit" type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

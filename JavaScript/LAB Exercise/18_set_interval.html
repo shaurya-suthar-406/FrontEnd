@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interval Clock</title>
+</head>
+<body>
+
+    <h1>Current Time:</h1>
+    <div id="time-display" style="font-size: 2em;">--:--:--</div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById('time-display').textContent = timeString;
+        }
+
+        updateTime();
+
+        setInterval(updateTime, 1000);
+    </script>
+
+</body>
+</html>

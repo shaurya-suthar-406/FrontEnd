@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 320px;
+            border: 2px solid rgb(148, 230, 255);
+            border-radius: 15px;
+            background-color: #f9f9f9;
+            padding: 30px;
+            margin: 50px auto;
+            align-items: center;
+        }
+        .img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #007bff;
+            margin-bottom: 20px;
+        }
+        .name{
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+        .bio{
+            margin: 0 0 25px 0;
+            color: #666;
+        }
+        .follow{
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+        }
+        .follow:hover{
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="data:image/png;base64,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" alt="" class="img">
+        <h3 class="name">Shaurya Suthar</h3>
+        <p class="bio">Passionate Fullstack Developer, Car Enthusiast and Lifelong learner. Building beautiful and
+            accessible web experiences one line of code at a time.</p>
+        <button class="follow">Follow</button>
+    </div>
+</body>
+
+</html>
