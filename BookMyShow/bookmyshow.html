@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <style>
+        .or-divider {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .privacy-text {
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md d-none d-md-flex bg-body-white">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://www.startupterminal.com/wp-content/uploads/2017/08/main-qimg-e61922a041b88f6de69505f19e150a57.png"
+                            class="px-2" alt="BookMyShow" width="100">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <input type="text" class="px-1" placeholder="Search" size="50%" data-bs-toggle="modal"
+                        data-bs-target="#myModal">
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog modal-fullscreen">
+                            <div class="modal-content">
+                                <div class="modal-header bg-body-white">
+                                    <div class="input">
+                                        <input type="text" class="form-control form-control-lg" size="65%"
+                                            placeholder="Search for Movies, Events, Plays & more">
+                                        <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                </div>
+                                <div class="modal-body bg-body-secondary">
+                                    <div class="d-flex overflow-auto pb-2 mb-3"
+                                        style="-ms-overflow-style: none; scrollbar-width: none;">
+                                        <button
+                                            class="btn btn-sm btn-outline-danger text-nowrap rounded-pill me-2">Movies</button>
+                                        <button
+                                            class="btn btn-sm btn-outline-danger text-nowrap rounded-pill me-2">Stream</button>
+                                        <button
+                                            class="btn btn-sm btn-outline-danger text-nowrap rounded-pill me-2">Events</button>
+                                        <button
+                                            class="btn btn-sm btn-outline-danger text-nowrap rounded-pill me-2">Plays</button>
+                                        <button
+                                            class="btn btn-sm btn-outline-danger text-nowrap rounded-pill me-2">Sports</button>
+                                        <button
+                                            class="btn btn-sm btn-outline-danger text-nowrap rounded-pill me-2">Activities</button>
+                                        <button
+                                            class="btn btn-sm btn-outline-danger text-nowrap rounded-pill me-2">Venues</button>
+                                    </div>
+                                    <h6 class="text-uppercase text-secondary small fw-bold mb-3">Trending Searches</h6>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item justify-content-between align-items-center py-2">
+                                            <div><a href="#" class="list-group-item list-group-item-action">Kantara: A
+                                                    Legend Chapter-1</a></div>
+                                            <i class="bi bi-calendar-event text-secondary"></i>
+                                        </li>
+                                        <li class="list-group-item justify-content-between align-items-center py-2">
+                                            <div><a href="#" class="list-group-item list-group-item-action">Chaniya
+                                                    Toli</a></div>
+                                            <i class="bi bi-calendar-event text-secondary"></i>
+                                        </li>
+                                        <li class="list-group-item justify-content-between align-items-center py-2">
+                                            <div><a href="#" class="list-group-item list-group-item-action">Thamma</a>
+                                            </div>
+                                            <i class="bi bi-calendar-event text-secondary"></i>
+                                        </li>
+                                        <li class="list-group-item justify-content-between align-items-center py-2">
+                                            <div><a href="#" class="list-group-item list-group-item-action">The Taj
+                                                    Story</a></div>
+                                            <i class="bi bi-calendar-event text-secondary"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item px-2">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#citySelector">
+                        <i class="fas fa-map-marker-alt me-1"></i>Ahmedabad
+                    </button>
+                    <div class="modal" id="citySelector">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                        <input type="text" class="form-control" placeholder="Search for your city">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <a href="#" class="text-danger" style="text-decoration: none;">Detect my
+                                        location</a>
+                                </div>
+                                <div class="text-center mb-3">
+                                    <span class="badge bg-white text-dark" style="font-size: 1rem;">Popular
+                                        Cities</span>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-around">
+                                    <div class="text-center static-city-item">
+                                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/mumbai.png"
+                                            alt="Mumbai" class="city-icon mb-1">
+                                        <div>Mumbai</div>
+                                    </div>
+                                    <div class="text-center static-city-item">
+                                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/ncr.png"
+                                            alt="Delhi-NCR" class="city-icon mb-1">
+                                        <div>Delhi-NCR</div>
+                                    </div>
+                                    <div class="text-center static-city-item">
+                                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/bang.png"
+                                            alt="Bengaluru" class="city-icon mb-1">
+                                        <div>Bengaluru</div>
+                                    </div>
+                                    <div class="text-center static-city-item">
+                                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/hyd.png"
+                                            alt="Hyderabad" class="city-icon mb-1">
+                                        <div>Hyderabad</div>
+                                    </div>
+                                    <div class="text-center static-city-item">
+                                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/ahd.png"
+                                            alt="Ahmedabad" class="city-icon mb-1">
+                                        <div>Ahmedabad</div>
+                                    </div>
+                                    <div class="text-center static-city-item">
+                                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/chd.png"
+                                            alt="Chandigarh" class="city-icon mb-1">
+                                        <div>Chandigarh</div>
+                                    </div>
+                                    <div class="text-center static-city-item">
+                                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/pune.png"
+                                            alt="Pune" class="city-icon mb-1">
+                                        <div>Pune</div>
+                                    </div>
+                                    <div class="text-center static-city-item">
+                                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/chen.png"
+                                            alt="Chennai" class="city-icon mb-1">
+                                        <div>Chennai</div>
+                                    </div>
+                                    <div class="text-center static-city-item">
+                                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/kolk.png"
+                                            alt="Kolkata" class="city-icon mb-1">
+                                        <div>Kolkata</div>
+                                    </div>
+                                    <div class="text-center static-city-item">
+                                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/koch.png"
+                                            alt="Kochi" class="city-icon mb-1">
+                                        <div>Kochi</div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="#" class="text-primary" style="text-decoration: none;">View All Cities</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item px-2 pt-1">
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#SignInModal">Sign In</button>
+                    <div class="modal" id="SignInModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="mx-auto">
+                                        <h5>Get Started</h5>
+                                    </div>
+                                    <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pt-3">
+                                    <div class="d-grid gap-2 col-8 mx-auto">
+                                        <button class="custom-btn-lg btn btn-light my-1 p-2">
+                                            <i class="fab fa-google text-danger"></i>
+                                            Continue with Google
+                                        </button>
+                                        <button class="custom-btn-lg btn btn-light my-1 p-2">
+                                            <i class="fas fa-envelope"></i>
+                                            Continue with Email
+                                        </button>
+                                        <button class="custom-btn-lg btn btn-light my-1 p-2">
+                                            <i class="fas fa-apple"></i>
+                                            Continue with Apple
+                                        </button>
+                                        <div class="or-divider mt-2">
+                                            OR
+                                        </div>
+                                        <input type="tel" class="my-5" placeholder="Continue with mobile number">
+                                        <div class="privacy-text">
+                                            I agree to the <a class="text-danger" href="#">Terms & Condition</a> & <a class="text-danger" href="#">Privacy
+                                                Policy</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                        <img src="https://static.thenounproject.com/png/1903099-200.png" width="30px">
+                    </button>
+                    <div class="offcanvas offcanvas-end" id="offcanvasMenu">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title">Hey!</h5>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-md d-none d-md-flex bg-body-secondary">
+        <div class="container-fluid">
+            <ul class="navbar-nav bg-body-secondary">
+                <li class="nav-item px-2"><a style="text-decoration: none; color: black;" href="#">Movies</a></li>
+                <li class="nav-item px-2"><a style="text-decoration: none; color: black;" href="#">Stream</a></li>
+                <li class="nav-item px-2"><a style="text-decoration: none; color: black;" href="#">Events</a></li>
+                <li class="nav-item px-2"><a style="text-decoration: none; color: black;" href="#">Plays</a></li>
+                <li class="nav-item px-2"><a style="text-decoration: none; color: black;" href="#">Sports</a></li>
+                <li class="nav-item px-2"><a style="text-decoration: none; color: black;" href="#">Activities</a></li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item px-2"><a style="text-decoration: none; color: black;" href="#">ListYourShow</a></li>
+                <li class="nav-item px-2"><a style="text-decoration: none; color: black;" href="#">Corporates</a></li>
+                <li class="nav-item px-2"><a style="text-decoration: none; color: black;" href="#">Offers</a></li>
+                <li class="nav-item px-2"><a style="text-decoration: none; color: black;" href="#">Gift Cards</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="slider1Indicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#slider1Indicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#slider1Indicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#slider1Indicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div id="Slider1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://assets-in-gm.bmscdn.com/promotions/cms/creatives/1760430005960_popccweb.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://assets-in-gm.bmscdn.com/promotions/cms/creatives/1760683702613_bandlandweb.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://assets-in-gm.bmscdn.com/promotions/cms/creatives/1759487085225_1240x300bmsluckyali.jpeg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://assets-in-gm.bmscdn.com/promotions/cms/creatives/1759228158093_30thsepjohnmayerdesktop.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#slider1Indicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#slider1Indicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container-fluid mt-4">
+        <div class="d-flex justify-content-between align-items-center mb3">
+            <h3 class="mb-2" style="font-weight: 700;">Recommended Movies</h3>
+            <a href="#" class="text-decoration-none text-danger ms-auto">See All > </a>          
+        </div>
+        <div class="carousel slide" id="movieCarousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row g-3">
+                        <div class="col-5-fixed">
+                            <div class="card h-100 border-0">
+                                <div class="position-relative">
+                                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC4zLzEwICA0MS40SysgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00443268-rjstrfyuak-portrait.jpg" class="card-img-top rounded" alt="Thamma">
+                                </div>
+                                <div class="card-body p-2">
+                                    <h6 class="card-title">Thamma</h6>
+                                    <p class="text-muted small">Comedy/Horror/Romantic/Supernatural</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5-fixed">
+                            <div class="card h-100 border-0">
+                                <div class="position-relative">
+                                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC43LzEwICAxLjhLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00451887-gltnqntzvk-portrait.jpg" class="card-img-top rounded" alt="Chaniya Toli">
+                                </div>
+                                <div class="card-body p-2">
+                                    <h6 class="card-title">Chaniya Toli</h6>
+                                    <p class="text-muted small">Action/Comedy/Crime</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5-fixed">
+                            <div class="card h-100 border-0">
+                                <div class="position-relative">
+                                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC4zLzEwICAxNi43SysgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00447585-pfbqxwkcdx-portrait.jpg" class="card-img-top rounded" alt="Ek Deewane Ki Deewaniyat">
+                                </div>
+                                <div class="card-body p-2">
+                                    <h6 class="card-title">Ek Deewane Ki Deewaniyat</h6>
+                                    <p class="text-muted small">Drama/Romantic/Thriller</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5-fixed">
+                            <div class="card h-100 border-0">
+                                <div class="position-relative">
+                                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS4zLzEwICA1MDNLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00377351-ctlsgzebdx-portrait.jpg" class="card-img-top rounded" alt="Kantara: A Legend Chapter-1">
+                                </div>
+                                <div class="card-body p-2">
+                                    <h6 class="card-title">Kantara: A Legend Chapter-1</h6>
+                                    <p class="text-muted small">Adventure/Drama/Thriller</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5-fixed">
+                            <div class="card h-100 border-0">
+                                <div class="position-relative">
+                                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@like_202006280402.png,lx-24,ly-617,w-29,l-end:l-text,ie-MS40SysgTGlrZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00464386-bazmbphnny-portrait.jpg" class="card-img-top rounded" alt="Misri">
+                                </div>
+                                <div class="card-body p-2">
+                                    <h6 class="card-title">Misri</h6>
+                                    <p class="text-muted small">Comedy/Romantic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="row g-3">
+                        <div class="col-5-fixed">
+                            <div class="card h-100 border-0">
+                                <div class="position-relative">
+                                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS4xLzEwICA0OS4ySysgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00452447-sqlwvhcvaf-portrait.jpg" class="card-img-top rounded" alt="Dhurandhar">
+                                </div>
+                                <div class="card-body p-2">
+                                    <h6 class="card-title">Dhurandhar</h6>
+                                    <p class="text-muted small">Action/Thriller</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5-fixed">
+                            <div class="card h-100 border-0">
+                                <div class="position-relative">
+                                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS40LzEwICAzNUsrIFZvdGVz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00459408-dyeszmzsuv-portrait.jpg" class="card-img-top rounded" alt="Laalo - Krishna Sada Sahaayate">
+                                </div>
+                                <div class="card-body p-2">
+                                    <h6 class="card-title">Laalo - Krishna Sada Sahaayate</h6>
+                                    <p class="text-muted small">Drama</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5-fixed">
+                            <div class="card h-100 border-0">
+                                <div class="position-relative">
+                                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC4zLzEwICA2MS4zSysgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00362760-fqulqfzury-portrait.jpg" class="card-img-top rounded" alt="Tere Ishk Mein">
+                                </div>
+                                <div class="card-body p-2">
+                                    <h6 class="card-title">Tere Ishk Mein</h6>
+                                    <p class="text-muted small">Drama/Romantic</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5-fixed">
+                            <div class="card h-100 border-0">
+                                <div class="position-relative">
+                                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC4zLzEwICAzNy41SysgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00391156-lngjgvjstp-portrait.jpg" class="card-img-top rounded" alt="De De Pyaar De 2">
+                                </div>
+                                <div class="card-body p-2">
+                                    <h6 class="card-title">De De Pyaar De 2</h6>
+                                    <p class="text-muted small">Comedy/Family/Romantic</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5-fixed">
+                            <div class="card h-100 border-0">
+                                <div class="position-relative">
+                                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS4xLzEwICAxMC4ySysgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00441877-ckrltjszzf-portrait.jpg" class="card-img-top rounded" alt="Zootopia 2">
+                                </div>
+                                <div class="card-body p-2">
+                                    <h6 class="card-title">Zootopia 2</h6>
+                                    <p class="text-muted small">Adventure/Animation/Comedy</p>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    <style>
+        .col-5-fixed{
+            flex: 0 0 auto;
+            width: 20%;
+        }
+    </style>
+
+    <div class="container">
+        <div class="banner">
+            <a href="">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/stream-leadin-web-collection-202210241242.png" width="98%" alt="">
+            </a>
+        </div><br><br>
+    </div>
+    
+    <div>
+        <h3 class="mb-2 ms-2" style="font-weight: 700;">The Best of Live Events</h3>
+        <div class="slider-wrapper">
+            <button id="prev-btn"><</button>
+            <div class="slider-container">
+                <div class="event-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NjArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/comedy-shows-collection-202211140440.png" width="90%" style="border-radius: 5%;" alt="">
+                </div>
+                <div class="event-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/theatre-shows-collection-202211140440.png" width="90%" style="border-radius: 5%;" alt="">
+                </div>
+                <div class="event-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/kids-banner-desktop-collection-202503251132.png" width="90%" style="border-radius: 5%;" alt="">
+                </div>
+                <div class="event-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NTUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/music-shows-collection-202211140440.png" width="90%" style="border-radius: 5%;" alt="">
+                </div>
+                <div class="event-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MzArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/arts-crafts-collection-202211140440.png" width="90%" style="border-radius: 5%;" alt="">           
+                </div>
+            </div>
+            <button id="next-btn">></button>
+        </div>
+    </div>
+
+    <style>
+        .slider-wrapper{
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+        .slider-container{
+            display: flex;
+            overflow-x: hidden;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        #prev-btn,#next-btn{
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+            margin: 0 10px;
+            border-radius: 50%;
+            font-size: 16px;
+        }
+    </style>
+</body>
+
+</html>
