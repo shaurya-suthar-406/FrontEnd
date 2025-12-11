@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Hospital Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Book Your Appointment</h1>
+
+        <form id="appointmentForm">
+            <div class="form-group">
+                <label for="applicantName">Applicant Name:</label>
+                <input type="text" id="applicantName" name="applicantName" required>
+                <div class="error-message" id="applicantNameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="emailAddress">Email Address:</label>
+                <input type="email" id="emailAddress" name="emailAddress" required>
+                <div class="error-message" id="emailAddressError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number (10 digits):</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{10}">
+                <div class="error-message" id="phoneNumberError"></div>
+            </div>
+
+            <div class="datetime-group">
+                <div class="form-group date-input">
+                    <label for="appointmentDate">Date:</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                    <div class="error-message" id="appointmentDateError"></div>
+                </div>
+
+                <div class="form-group time-input">
+                    <label for="appointmentTime">Time:</label>
+                    <input type="time" id="appointmentTime" name="appointmentTime" required>
+                    <div class="error-message" id="appointmentTimeError"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="medicalComment">Medical Disease/Comment (Min 50 chars):</label>
+                <textarea id="medicalComment" name="medicalComment" rows="4" required></textarea>
+                <div class="error-message" id="medicalCommentError"></div>
+            </div>
+            
+            <div id="alertContainer"></div>
+
+            <button type="submit" id="submitButton">Book Appointment</button>
+        </form>
+        
+        <p class="view-link">
+            <a href="view-appointments.html">View My Appointments</a>
+        </p>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

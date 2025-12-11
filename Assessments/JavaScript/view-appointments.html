@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Appointments | Hospital Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Appointment Viewer</h1>
+        <p class="view-link"><a href="index.html">← Book a New Appointment</a></p>
+
+        <div class="search-controls">
+            <input type="text" id="searchInput" placeholder="Search by Name or Date...">
+        </div>
+
+        <div id="alertContainer"></div>
+
+        <div id="appointmentsTableContainer">
+            </div>
+
+        <p id="noResultsMessage" class="hidden">No applications found.</p>
+    </div>
+
+    <script type="module" src="view-app.js"></script>
+</body>
+</html>
